@@ -1,0 +1,93 @@
+/* Custom styles for the calculator */
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Light gray background */
+}
+.calculator {
+    background-color: #1e293b; /* Dark slate blue */
+    border-radius: 1.5rem; /* More rounded corners */
+    padding: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    width: 100%;
+    max-width: 320px; /* Max width for desktop, fluid for mobile */
+    border: 2px solid #334155; /* Subtle border */
+}
+.display {
+    background-color: #0f172a; /* Even darker blue for display */
+    color: #f8fafc; /* Light text color */
+    font-size: 2.5rem; /* Larger font size */
+    text-align: right;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem; /* Rounded display */
+    margin-bottom: 1.25rem;
+    min-height: 60px; /* Ensure display has a minimum height */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    word-wrap: break-word; /* Allow long numbers to wrap */
+    overflow-x: auto; /* Enable horizontal scrolling if text overflows */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem; /* Increased gap between buttons */
+}
+.button {
+    padding: 1.25rem; /* Larger padding for buttons */
+    font-size: 1.5rem; /* Larger font size for buttons */
+    border-radius: 1rem; /* More rounded buttons */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, transform 0.1s;
+    color: #f8fafc; /* Default text color for buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none; /* Remove default button border */
+}
+.button:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+.button:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Number and decimal buttons */
+.button.number, .button.decimal {
+    background-color: #334155; /* Darker gray-blue for numbers */
+}
+.button.number:hover, .button.decimal:hover {
+    background-color: #475569; /* Lighter hover for numbers */
+}
+
+/* Operator buttons */
+.button.operator {
+    background-color: #f97316; /* Orange for operators */
+}
+.button.operator:hover {
+    background-color: #ea580c; /* Darker orange on hover */
+}
+
+/* Clear button */
+.button.clear {
+    background-color: #dc2626; /* Red for clear */
+    grid-column: span 2; /* Span two columns */
+}
+.button.clear:hover {
+    background-color: #b91c1c; /* Darker red on hover */
+}
+
+/* Equals button */
+.button.equals {
+    background-color: #22c55e; /* Green for equals */
+    grid-column: span 2; /* Span two columns */
+}
+.button.equals:hover {
+    background-color: #16a34a; /* Darker green on hover */
+}
